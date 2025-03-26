@@ -1,0 +1,23 @@
+<div [ngClass]="{'collapsed': collapsed}" class="sidebar bg-dark">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/mainpage" routerLinkActive="active" >
+          <i class="bi bi-house"></i>
+          <span class="link-text">Home</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/profile" routerLinkActive="active">
+          <i class="bi bi-person"></i>
+          <span class="link-text">Profile</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/settings" routerLinkActive="active">
+          <i class="bi bi-gear"></i>
+          <span class="link-text">Settings</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  

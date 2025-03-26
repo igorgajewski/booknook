@@ -1,0 +1,35 @@
+.sidebar {
+  width: 200px;
+  transition: width 0.3s;
+  overflow: hidden;
+  border-right: 1px solid #ddd;
+  min-height: 100vh;
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+  }
+  
+  // Give the icon a fixed container so its position doesn't change.
+  .nav-link i {
+    flex-shrink: 0;
+    width: 24px; // adjust as needed for your icons
+    text-align: center;
+  }
+  
+  .link-text {
+    margin-left: 0.5rem;
+    transition: opacity 0.3s;
+  }
+  
+  &.collapsed {
+    width: 50px;
+    
+    .link-text {
+      opacity: 0;
+      visibility: hidden; // keeps the space from affecting layout during transition
+    }
+  }
+}
