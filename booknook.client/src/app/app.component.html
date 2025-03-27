@@ -1,7 +1,16 @@
-﻿<app-topbar (toggleSidebar)="onToggleSidebar()"></app-topbar>
+﻿<app-topbar 
+  (toggleSidebar)="onToggleSidebar()" 
+  (loginClick)="toggleLoginModal()"
+  [modalOpen]="showLoginModal">
+</app-topbar>
 <div class="d-flex">
   <app-sidebar [collapsed]="sidebarCollapsed"></app-sidebar>
   <div class="flex-grow-1 p-3">
     <router-outlet></router-outlet>
   </div>
 </div>
+<app-login-modal 
+  *ngIf="showLoginModal" 
+  (closed)="closeLoginModal()"
+  (loginSuccess)="onLoginSuccess($event)">
+</app-login-modal>

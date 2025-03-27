@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-topbar',
@@ -8,8 +8,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class TopbarComponent {
 @Output() toggleSidebar = new EventEmitter<void>();
+@Output() loginClick = new EventEmitter<void>();
+@Input() modalOpen = false;
 
 onToggleSidebar(): void {
   this.toggleSidebar.emit();
+}
+
+onLoginClick(): void {
+  this.loginClick.emit();
 }
 }

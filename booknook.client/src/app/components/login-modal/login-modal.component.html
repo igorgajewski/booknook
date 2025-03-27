@@ -1,0 +1,36 @@
+<div class="login-modal-overlay" (click)="close()">
+  <div class="login-modal" (click)="$event.stopPropagation()">
+    <div class="card">
+      <div class="card-header">
+        <span>Login</span>
+      </div>
+      <div class="card-body">
+        <form (submit)="login($event)">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              id="username"
+              type="text"
+              class="form-control"
+              [(ngModel)]="username"
+              name="username"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              id="password"
+              type="password"
+              class="form-control"
+              [(ngModel)]="password"
+              name="password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-light w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

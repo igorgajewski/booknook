@@ -9,6 +9,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
-  @Input() collapsed = true;
+  @Input() collapsed = false;
 
 }
