@@ -1,9 +1,13 @@
 .sidebar {
-  width: 200px;
+  width: 240px;
   transition: width 0.3s;
   overflow: hidden;
   border-right: 1px solid #ddd;
-  min-height: 100vh;
+  height: calc(100vh - 50px);
+
+  .nav-item{
+    height: 40px;
+  }
   
   .nav-link {
     display: flex;
@@ -15,7 +19,7 @@
   // Give the icon a fixed container so its position doesn't change.
   .nav-link i {
     flex-shrink: 0;
-    width: 24px; // adjust as needed for your icons
+    width: 40px; // adjust as needed for your icons
     text-align: center;
   }
   
@@ -25,7 +29,7 @@
   }
   
   &.collapsed {
-    width: 50px;
+    width: 80px;
     
     .link-text {
       opacity: 0;

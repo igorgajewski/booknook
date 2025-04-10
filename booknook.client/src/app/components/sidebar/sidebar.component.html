@@ -1,23 +1,83 @@
-<div [ngClass]="{'collapsed': collapsed}" class="sidebar bg-dark">
-    <ul class="nav flex-column">
-      <li class="nav-item">
+<div [ngClass]="{'collapsed': collapsed}" class="sidebar bg-dark d-flex flex-column">
+  <div class="mt-3" style="background-color:rgb(105, 71, 69); height: 32px;"><!--logo-->
+    <span class="link-text text-light">LOGO</span>
+  </div>
+  <div class="mt-3" style="background-color: rgb(91, 138, 138); height: 32px;"><!--search-->
+    <form class="d-flex" role="search">
+      <input class="form-control" type="search" placeholder="Search" style="height: 32px; width:200px;margin-left: 20px;">
+    </form>
+  </div>
+  <div class="mt-5" style="background-color:rgb(105, 105, 69)"> <!--Main-->
+    <span class="link-text text-light">Main</span>
+    <ul class="nav flex-column d-flex">
+      <li class="nav-item mt-2">
         <a class="nav-link text-light" routerLink="/mainpage" routerLinkActive="active" >
           <i class="bi bi-house"></i>
           <span class="link-text">Home</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item mt-2">
         <a class="nav-link text-light" routerLink="/profile" routerLinkActive="active">
           <i class="bi bi-person"></i>
           <span class="link-text">Profile</span>
         </a>
       </li>
+      <li class="nav-item mt-2">
+        <a class="nav-link text-light" routerLink="/profile" routerLinkActive="active">
+          <i class="bi bi-person"></i>
+          <span class="link-text">Profile</span>
+        </a>
+      </li>
+      <li class="nav-item mt-2">
+        <a class="nav-link text-light" routerLink="/profile" routerLinkActive="active">
+          <i class="bi bi-person"></i>
+          <span class="link-text">Profile</span>
+        </a>
+      </li>
+      <li class="nav-item mt-2">
+        <a class="nav-link text-light" routerLink="/profile" routerLinkActive="active">
+          <i class="bi bi-person"></i>
+          <span class="link-text">Profile</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="mt-5" style="background-color:rgb(105, 105, 69)"><!--communication-->
+    <span class="link-text text-light">Communication</span>
+    <ul class="nav flex-column d-flex">
+      <li class="nav-item mt-2">
+        <a class="nav-link text-light" routerLink="/profile" routerLinkActive="active">
+          <i class="bi bi-person"></i>
+          <span class="link-text">Profile</span>
+        </a>
+      </li>
+      <li class="nav-item mt-2">
+        <a class="nav-link text-light" routerLink="/profile" routerLinkActive="active">
+          <i class="bi bi-person"></i>
+          <span class="link-text">Profile</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="mt-3" style="background-color:rgb(105, 105, 69)"><!--some other component-->
+
+  </div>
+  <div class="mt-auto"><!--settings and help-->
+    <ul class="nav flex-column d-flex">
       <li class="nav-item">
         <a class="nav-link text-light" routerLink="/settings" routerLinkActive="active">
           <i class="bi bi-gear"></i>
           <span class="link-text">Settings</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/help" routerLinkActive="active">
+          <i class="bi bi-question-circle"></i>
+          <span class="link-text">Help</span>
+        </a>
+      </li>
     </ul>
+  </div>
   </div>
   
